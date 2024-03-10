@@ -37,7 +37,8 @@
     "src",
     "types/**/*.d.ts",
     "src/types/auto-imports.d.ts",
-    "src/types/auto-components.d.ts"
+    "src/types/auto-components.d.ts",
+    "./src/**/*.ts"
   ],
   "exclude": ["dist", "target", "node_modules"]
 }

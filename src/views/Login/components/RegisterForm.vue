@@ -22,7 +22,7 @@
     <template #codeImg="form">
       <div class="w-[100%] flex">
         <el-input v-model="form['codeImg']" :placeholder="t('login.codeImg')" />
-        <img src="" alt="" class="w-[140px] h-[30px] absolute top-[6px] right-0" />
+        <CodeImg />
       </div>
     </template>
 
@@ -53,6 +53,7 @@ import * as LoginApi from "@/api/login";
 import { useForm } from "@/hooks/web/useForm";
 import { useValidator } from "@/hooks/web/useValidator";
 import { FormSchema } from "@/types/form";
+import CodeImg from "./CodeImg.vue";
 import LoginFormTitle from "./LoginFormTitle.vue";
 import { LoginStateEnum, useLoginState } from "./useLogin";
 

@@ -2,11 +2,7 @@ module.exports = {
   root: true,
   plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
-  extends: [
-    'stylelint-config-standard',
-    // 如果是vue项目，需要添加
-    'stylelint-config-recommended-vue',
-  ],
+  extends: ['stylelint-config-standard'],
   rules: {
     'selector-pseudo-class-no-unknown': [
       true,
@@ -24,12 +20,8 @@ module.exports = {
     'function-no-unknown': null,
     'no-empty-source': null,
     'named-grid-areas-no-invalid': null,
-    'unicode-bom': 'never',
     'no-descending-specificity': null,
     'font-family-no-missing-generic-family-keyword': null,
-    'declaration-colon-space-after': 'always-single-line',
-    'declaration-colon-space-before': 'never',
-    'declaration-block-trailing-semicolon': null,
     'rule-empty-line-before': [
       'always',
       {
