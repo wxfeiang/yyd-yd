@@ -1,5 +1,6 @@
 import { Ref } from 'vue';
 
+import { random } from 'lodash-es';
 export enum LoginStateEnum {
   LOGIN,
   REGISTER,
@@ -14,7 +15,7 @@ const currentState = ref(LoginStateEnum.LOGIN)
 
 export function useLoginState() {
   function setLoginState(state: LoginStateEnum) {
-    console.log('🍩[state]:', state);
+
     currentState.value = state
   }
   const getLoginState = computed(() => currentState.value)
@@ -40,5 +41,23 @@ export function useFormValid<T extends Object = any>(formRef: Ref<any>) {
 
   return {
     validForm
+  }
+}
+// 验证码相关
+const url = ref("");
+const flog = ref('');
+export const useCode = () => {
+
+  // 获取验证码
+  const getCodeImg = async () => {
+    console.log('🍑==============');
+    // const res = await LoginApi.getCodeImg();
+    // url.value = res.data.img;
+    // flog.value = res.data.img
+    url.value = random(1000, 9999) + "asdcasdcas"
+    flog.value = random(10, 99) + "ppppppppppasadsa"
+  }
+  return {
+    getCodeImg, url, flog
   }
 }

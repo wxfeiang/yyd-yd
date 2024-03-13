@@ -84,3 +84,8 @@ export const reqCheck = (data) => {
 export const register = (data: any) => {
   return request.post({ url: '/system/auth/register', data })
 }
+
+export const getCodeImg = () => {
+  return request.post({ url: '/system/auth/codeImg'})
+}
+
